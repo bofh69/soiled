@@ -1,0 +1,37 @@
+# Introduction #
+
+Version 0.44 adds the ability to change the font and open received URLs
+in new windows.
+
+# Detailed changelist #
+
+  * Added a "font" command to change font.
+  * By setting FONT\_SIZE and FONT\_NAME variables, one can change the font used during startup.
+  * Soiled now supports DECOM, IRM and LNM.
+  * Improved the example installation HTML.
+  * The installation documentation has been improved.
+  * A C-server, MCTS - the MUD Client Test Server, has been added to make it easier to test TELNET/MUD-clients.
+  * Some code has been added to detect when the client has no network access due to the security model of the Adobe flash player.
+  * A make target has been added to generate API-documentation from the source.
+  * The code has been rewritten to be easier to understand.
+
+# The changes in version 0.43 #
+
+Version 0.43 only contains a few, minor changes. It is now stable enough to play and view games at http://nethack.alt.org/
+
+# Detailed changelist #
+
+  * Added support for Reverse Index (RI).
+  * Changed the HOME and END keys to work like xterm.
+
+# The changes in version 0.42 #
+
+  * Change the order of the terminal names; put xterm-color first, to make it easy to use the client against public NetHack servers (and other telnetd based services).
+  * Changed BACKSPACE and DELETE keys to be like VT220 (and linux console, OS X Terminal) when not in local edit mode; BS sends DEL (127), DEL sends CSI 3 tilde
+  * Fixed incorrect escaping of IAC, causing 127 to be escaped instead of 255...
+  * Made the initial setting of LOCAL\_EDIT be settable from the flash-parameters.
+  * Made LOCAL\_EDIT be off if in char-by-char mode.
+  * Added support for one byte CSI and OSC characters (and they work with UTF-8 too).
+  * Implemented the Q-method of TELNET option negotiation to add some extra protection against option-looping when dealing with servers that don't implement the protocol correctly.
+  * Optimised pasting some.
+  * (Refactored the code some and split it into more classes).

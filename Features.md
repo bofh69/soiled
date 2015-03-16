@@ -1,0 +1,23 @@
+# Introduction #
+
+Soiled is a mud client, but it is also a good enough terminal emulator and telnet implementation for it to connect to most telnet servers.
+Some of the features described here might only be available when building the source, not in the latest released, binary version.
+
+# Details #
+
+  * Uses the TELNET protocol.  Understands ECHO, ENDOFRECORD, SUPRESS GO AHEAD, TERMINAL TYPE and NAWS TELNET options, answers DONT/WONT on other options.
+  * Understands LF and CR like they are supposed to work.
+  * Has local line editing using the emacs key bindings (CTRL-A, B, D, E, F, K, L, U and W).
+  * Sends cursor keys, F1-F12, PGUP, PGDN, HOME and END to the server. Cursor keys can be sent in both application and "normal" mode.
+  * Supports the following VT100/VT102 control functions: SM, RM, DECALN, DECAWM, DECSET, DECRST, DECSTBM, CUU, CUD, CUF, CUB, CUP, HVP, IND, RI, NEL, DECSC, DECRC, DECPAM, DECKPNM, SCS, SGR, HTS, TBC, EL, ED, DCH, IL, DL, DA, DECID, RI, RIS, DECOM, IRM, LNM, FF and VT.
+  * Understands xterm's 256 colour sequences.
+  * char-by-char mode, sort off... When local echo is turned off, it operates in char-by-char mode.
+  * Works as a client to most MUD servers and one can play NetHack with DECGraphics and IBMgraphics via it. :-)
+  * Basic scrollback buffer. Use shift + PGUP/PGDN to look at previous output.
+  * Copy & Paste (and copy as html for taking "screendumps" to html pages).
+  * Aliases/macros. There is basic support for aliases & macros, but nothing fancy yet.
+  * Internal commands can be viewed with: /help
+  * Command/ctrl clicking an URL will open it in the browser.
+  * TAB expansion of previously entered commands/words.
+  * Limited support for auto-login, it just sends a string at connection time.
+  * Supports the "vt\_tiledata" option for NetHack (and clones) to show graphical tiles.
